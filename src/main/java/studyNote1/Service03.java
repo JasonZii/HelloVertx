@@ -11,6 +11,7 @@ public class Service03 extends AbstractVerticle{
 
     public static final String URL03="VERTX_HELLO_SERVER03";
 
+    @Override
     public void start(){
         vertx.eventBus().consumer(URL03,   //处理总线发送过来的相应的事件
                 msg -> {                   //msg消息发送过来的消息

@@ -13,6 +13,7 @@ import io.vertx.ext.web.Router;
  * @CreateDate : 18.5.16  22:57
  */
 public class Server01 extends AbstractVerticle {
+    @Override
     public void start(){  //服务一发布就会执行start
         Router router=Router.router(vertx);
         System.out.println("enter");

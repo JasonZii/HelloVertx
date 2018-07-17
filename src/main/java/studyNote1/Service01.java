@@ -13,6 +13,7 @@ public class Service01 extends AbstractVerticle{
     public static final String URL01="VERTX_HELLO_SERVER01";
     public static final String URL02="VERTX_HELLO_SERVER02";
 
+    @Override
     public void start(){
         vertx.eventBus().consumer(URL01,
                 msg -> {

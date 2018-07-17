@@ -28,6 +28,7 @@ public class VertxTest extends AbstractVerticle {
         // router.get("/hello")表示所监听URL路径
         router.get("/hello").handler(new Handler<RoutingContext>() {
 
+            @Override
             public void handle(RoutingContext event) {
                 event.response().putHeader("content-type", "text/html").end("Hello World");
             }
@@ -35,6 +36,7 @@ public class VertxTest extends AbstractVerticle {
         // 传递方法引用，监听端口
         vertx.createHttpServer().requestHandler(new Handler<HttpServerRequest>() {
 
+            @Override
             public void handle(HttpServerRequest event) {
                 router.accept(event);
             }
